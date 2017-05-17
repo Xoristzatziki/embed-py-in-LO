@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 AUTHOR = 'Xoristzatziki στο github.com'
 LICENCE = 'CC-BY-SA'
-VERSION = '0.1.0'
+VERSION = '0.1.1'
 APPNAME = 'EMBED PYTHON IN LO DOCUMENT'
 APPFILENAME = 'embedpythoninLO'
 COMMENTS = 'Πρόγραμμα ενσωμάτωσης ενός αρχείου python σε ένα αρχείο LibreOffice\rώστε να μπορεί να χρησιμοποιηθεί ως user script.'
@@ -10,17 +10,8 @@ BACKUPCOPIES = 10
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
-from gi.repository import Gdk
-from gi.repository import GdkPixbuf
-from gi.repository import GLib
-from gi.repository import GObject
-
-import time
 import os, sys
-import datetime
 
-#import os, sys
-import glob
 import shutil
 import tempfile
 import zipfile
@@ -306,7 +297,7 @@ class EmbedScriptGUI(Gtk.Window):
         #from .aboutbox import AboutBox #as AboutBox
         #app = AboutBox(self)
         #pass
-        app = AboutBox(self)
+        AboutBox(self)
 
     def on_buttonrun_clicked(self, widget,*args):
         #pass
@@ -369,7 +360,7 @@ class EmbedScriptGUI(Gtk.Window):
             Gtk.FileChooserAction.OPEN,
             (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
              Gtk.STOCK_OPEN, Gtk.ResponseType.OK))
-        self.add_LO_filters(dialog)
+        add_LO_filters(dialog)
         dialog.set_current_folder(self.LASTPATH)
         response = dialog.run()
         if response == Gtk.ResponseType.OK:
@@ -385,7 +376,7 @@ class EmbedScriptGUI(Gtk.Window):
             Gtk.FileChooserAction.OPEN,
             (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
              Gtk.STOCK_OPEN, Gtk.ResponseType.OK))
-        self.add_py_filters(dialog)
+        add_py_filters(dialog)
         dialog.set_current_folder(self.LASTPATH)
         response = dialog.run()
         if response == Gtk.ResponseType.OK:
@@ -400,57 +391,6 @@ class EmbedScriptGUI(Gtk.Window):
         self.set_modal(False)
         self.hide()
 
-    def add_LO_filters(self, dialog):
-        filter_LO = Gtk.FileFilter()
-        filter_LO.set_name("Αρχεία LibreOffice")
-        filter_LO.add_mime_type("application/vnd.oasis.opendocument.text")
-        filter_LO.add_mime_type("application/vnd.oasis.opendocument.spreadsheet")
-        filter_LO.add_mime_type("application/vnd.oasis.opendocument.database")
-        filter_LO.add_mime_type("application/vnd.oasis.opendocument.presentation")
-        filter_LO.add_mime_type("application/vnd.oasis.opendocument.graphics")
-        dialog.add_filter(filter_LO)
-
-        filter_calc = Gtk.FileFilter()
-        filter_calc.set_name("Αρχεία Calc")
-        filter_calc.add_mime_type("application/vnd.oasis.opendocument.spreadsheet")
-        dialog.add_filter(filter_calc)
-
-        filter_write = Gtk.FileFilter()
-        filter_write.set_name("Αρχεία Writer")
-        filter_write.add_mime_type("application/vnd.oasis.opendocument.text")
-        dialog.add_filter(filter_write)
-
-        filter_base = Gtk.FileFilter()
-        filter_base.set_name("Αρχεία Base")
-        filter_base.add_mime_type("application/vnd.oasis.opendocument.database")
-        dialog.add_filter(filter_base)
-
-        filter_impress = Gtk.FileFilter()
-        filter_impress.set_name("Αρχεία Impress")
-        filter_impress.add_mime_type("application/vnd.oasis.opendocument.presentation")
-        dialog.add_filter(filter_impress)
-
-        filter_draw= Gtk.FileFilter()
-        filter_draw.set_name("Αρχεία Draw")
-        filter_draw.add_mime_type("application/vnd.oasis.opendocument.graphics")
-        dialog.add_filter(filter_draw)
-
-        filter_any = Gtk.FileFilter()
-        filter_any.set_name("Όλα")
-        filter_any.add_pattern("*")
-        dialog.add_filter(filter_any)
-
-    def add_py_filters(self, dialog):
-        filter_py = Gtk.FileFilter()
-        filter_py.set_name("Αρχεία python")
-        filter_py.add_mime_type("text/x-python")
-        dialog.add_filter(filter_py)
-
-        filter_any = Gtk.FileFilter()
-        filter_any.set_name("Όλα")
-        filter_any.add_pattern("*")
-        dialog.add_filter(filter_any)
-
     def show_error(self,label2):
         dialog = Gtk.MessageDialog(self, 0, Gtk.MessageType.ERROR,
             Gtk.ButtonsType.CANCEL, "ΣΦΑΛΜΑ!")
@@ -462,7 +402,7 @@ class EmbedScriptGUI(Gtk.Window):
         dialog = Gtk.MessageDialog(self, 0, Gtk.MessageType.INFO,
             Gtk.ButtonsType.OK, label1)
         dialog.format_secondary_text(label2)
-        response = dialog.run()
+        dialog.run()
         dialog.destroy()
 
     def ask_continue(self, label1, label2):
@@ -522,11 +462,62 @@ def nextbackupnum(LOfpath):
             return x+1
     return -1
 
+def add_LO_filters(dialog):
+    filter_LO = Gtk.FileFilter()
+    filter_LO.set_name("Αρχεία LibreOffice")
+    filter_LO.add_mime_type("application/vnd.oasis.opendocument.text")
+    filter_LO.add_mime_type("application/vnd.oasis.opendocument.spreadsheet")
+    filter_LO.add_mime_type("application/vnd.oasis.opendocument.database")
+    filter_LO.add_mime_type("application/vnd.oasis.opendocument.presentation")
+    filter_LO.add_mime_type("application/vnd.oasis.opendocument.graphics")
+    dialog.add_filter(filter_LO)
+
+    filter_calc = Gtk.FileFilter()
+    filter_calc.set_name("Αρχεία Calc")
+    filter_calc.add_mime_type("application/vnd.oasis.opendocument.spreadsheet")
+    dialog.add_filter(filter_calc)
+
+    filter_write = Gtk.FileFilter()
+    filter_write.set_name("Αρχεία Writer")
+    filter_write.add_mime_type("application/vnd.oasis.opendocument.text")
+    dialog.add_filter(filter_write)
+
+    filter_base = Gtk.FileFilter()
+    filter_base.set_name("Αρχεία Base")
+    filter_base.add_mime_type("application/vnd.oasis.opendocument.database")
+    dialog.add_filter(filter_base)
+
+    filter_impress = Gtk.FileFilter()
+    filter_impress.set_name("Αρχεία Impress")
+    filter_impress.add_mime_type("application/vnd.oasis.opendocument.presentation")
+    dialog.add_filter(filter_impress)
+
+    filter_draw= Gtk.FileFilter()
+    filter_draw.set_name("Αρχεία Draw")
+    filter_draw.add_mime_type("application/vnd.oasis.opendocument.graphics")
+    dialog.add_filter(filter_draw)
+
+    filter_any = Gtk.FileFilter()
+    filter_any.set_name("Όλα")
+    filter_any.add_pattern("*")
+    dialog.add_filter(filter_any)
+
+def add_py_filters(dialog):
+    filter_py = Gtk.FileFilter()
+    filter_py.set_name("Αρχεία python")
+    filter_py.add_mime_type("text/x-python")
+    dialog.add_filter(filter_py)
+
+    filter_any = Gtk.FileFilter()
+    filter_any.set_name("Όλα")
+    filter_any.add_pattern("*")
+    dialog.add_filter(filter_any)
+
 #WARNING: This will overwrite an existing python file with the same name!
 def insertpythonfile(pyfpath, LOfpath):
     valuetoreturn = -3
-    pyfhead, pyftail = os.path.split(pyfpath)
-    LOfhead, LOftail = os.path.split(LOfpath)
+    pyftail = os.path.split(pyfpath)[1]
+    LOftail = os.path.split(LOfpath)[1]
     LObackupnum = nextbackupnum(LOfpath)
     if LObackupnum < 1:
         valuetoreturn = -1
@@ -579,4 +570,4 @@ def main(realfile_dir):
 if __name__ == "__main__":
     realfile = os.path.realpath(__file__)
     realfile_dir = os.path.dirname(os.path.abspath(realfile))
-    test = main(realfile_dir)
+    main(realfile_dir)
