@@ -537,6 +537,7 @@ def insertpythonfile(pyfpath, LOfpath):
         with zipfile.ZipFile(LOfpath, 'r') as zipread:
             with zipread.open('META-INF/manifest.xml') as f:
                 manifestoldlines = [x.decode('utf8').rstrip() for x in f.read().splitlines()]
+            with zipread.open('META-INF/manifest.xml') as f:
                 oldmanifest = f.read()
             with zipfile.ZipFile(newzipfpath, 'w') as zipwrite:
                 for item in zipread.infolist():
