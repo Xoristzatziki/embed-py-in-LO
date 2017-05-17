@@ -325,7 +325,7 @@ class EmbedScriptGUI(Gtk.Window):
             response = self.ask_continue(txt1,txt2)
             if not response:
                 return
-        pyfhead, pyftail = os.path.split(pyfpath)
+        pyftail = os.path.split(pyfpath)[1]
         if file_existed(pyftail, LOfpath):
             txt1 = 'Το αρχείο υπάρχει!'
             txt2 = 'Το αρχείο:\r\t%s\r περιέχει ήδη ένα αρχείο python με το ίδιο όνομα:\r\t%s\r' % (LOfpath,pyftail)
@@ -395,7 +395,7 @@ class EmbedScriptGUI(Gtk.Window):
         dialog = Gtk.MessageDialog(self, 0, Gtk.MessageType.ERROR,
             Gtk.ButtonsType.CANCEL, "ΣΦΑΛΜΑ!")
         dialog.format_secondary_text(label2)
-        response = dialog.run()
+        dialog.run()
         dialog.destroy()
 
     def show_info(self, label1, label2):
