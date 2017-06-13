@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 AUTHOR = 'Xoristzatziki στο github.com'
-LICENCE = 'CC-BY-SA'
+LICENCE = 'GPL v3'
 VERSION = '0.1.1'
 APPNAME = 'EMBED PYTHON IN LO DOCUMENT'
 APPFILENAME = 'embedpythoninLO'
