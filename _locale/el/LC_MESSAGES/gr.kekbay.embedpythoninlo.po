@@ -1,0 +1,136 @@
+# GUI for embeding a Python user script in a LibreOffrice Document.
+# Copyright (C) 2018 Ηλιάδης Ηλίας
+# This file is distributed under the same license as the PACKAGE sampleapp.
+# FIRST AUTHOR <iliadis@kekbay.gr>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.0.11\n"
+"Report-Msgid-Bugs-To: iliadis@kekbay.gr\n"
+"POT-Creation-Date: 2018-03-12 08:03+0200\n"
+"PO-Revision-Date: 2018-03-12 17:00+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Last-Translator: Ηλιάδης Ηλίας <iliadis@kekbay.gr>\n"
+"Language: el\n"
+"X-Poedit-SearchPath-0: ../pilo.py\n"
+"X-Poedit-SearchPath-1: ../main.glade\n"
+
+#: ../main.glade:23
+msgid "LibreOffice file"
+msgstr "Αρχείο LibreOffice"
+
+#: ../main.glade:44
+msgid "..."
+msgstr ""
+
+#: ../main.glade:89
+msgid "Existing"
+msgstr "Υπάρχοντα"
+
+#: ../main.glade:138
+msgid "Remove"
+msgstr "Για αφαίρεση"
+
+#: ../main.glade:209
+msgid "Add-Replace"
+msgstr "Προσθήκη-Ενημέρωση"
+
+#: ../main.glade:222
+msgid "Select new python file to add or replace an old version"
+msgstr "Επιλέξτε ένα αρχείο python για να προσθέσετε ή να αντικαταστήσετε ένα παλιό με το ίδιο όνομα"
+
+#: ../main.glade:312
+msgid "Nothing selected."
+msgstr "Δεν έχει επιλεγεί τίποτε."
+
+#: ../main.glade:335
+msgid "Run..."
+msgstr "Τρέξτο..."
+
+#: ../main.glade:357
+msgid "Place for Version"
+msgstr "Θέση για την έκδοση."
+
+#: ../main.glade:371
+msgid "About..."
+msgstr "Περί..."
+
+#: ../main.glade:396
+msgid "Button to run tests"
+msgstr "Κουμπί για δοκιμές"
+
+#: ../main.glade:420
+msgid "Exit"
+msgstr "Έξοδος"
+
+#: ../pilo.py:70 ../pilo.py:113
+msgid "WARNING! Configuration file unwriteable!"
+msgstr "ΠΡΟΣΟΧΗ! Δεν μπορώ να γράψω στο αρχείο διαμόρφωσης!"
+
+#: ../pilo.py:89 ../pilo.py:103
+msgid "Exception: "
+msgstr "Εξαίρεση:"
+
+#: ../pilo.py:120
+msgid "WARNING! Configuration not saved!"
+msgstr "ΠΡΟΣΟΧΗ! Το αρχείο διαμόρφωσης δεν σώθηκε!"
+
+#: ../pilo.py:433
+msgid "Right click to remove."
+msgstr "Δεξί κλικ για αφαίρεση."
+
+#: ../pilo.py:471 ../pilo.py:486
+msgid "Icluded:"
+msgstr "Περιλαμβάνεται:"
+
+#: ../pilo.py:503
+#, python-brace-format
+msgid "Please choose a file ({0})"
+msgstr "Παρακαλώ επιλέξτε ένα αρχείο ({0})"
+
+#: ../pilo.py:524
+msgid "NOT YET!"
+msgstr "ΟΧΙ ΑΚΟΜΑ!"
+
+#: ../pilo.py:525
+msgid "Not yet implemented!"
+msgstr "Δεν έχει φτιαχτεί ακόμα!"
+
+#: ../pilo.py:533
+msgid "LibreOffice files"
+msgstr "Αρχεία LibreOffice"
+
+#: ../pilo.py:542
+msgid "Calc files"
+msgstr "Αρχεία Calc"
+
+#: ../pilo.py:547
+msgid "Writer files"
+msgstr "Αρχεία Writer"
+
+#: ../pilo.py:552
+msgid "Base files"
+msgstr "Αρχεία Base"
+
+#: ../pilo.py:557
+msgid "Impress files"
+msgstr "Αρχεία Impress"
+
+#: ../pilo.py:562
+msgid "Draw files"
+msgstr "Αρχεία Draw"
+
+#: ../pilo.py:567 ../pilo.py:578
+msgid "All files"
+msgstr "Όλα τα αρχεία"
+
+#: ../pilo.py:573
+msgid "Python  files"
+msgstr "Αρχεία python"
