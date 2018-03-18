@@ -33,7 +33,7 @@ In order to access a python script embedded in a LibreOffice document there are 
 * -Use this gui
 * -Or, alternatively, install the extention https://extensions.libreoffice.org/extensions/apso-alternative-script-organizer-for-python
 
-In order to access python scripts from LibreOffice Basic you must create a LibreOffice Basic FUNCTION or SUB that will call the script. You can find a very "elementary" LibreOffice FUNCTION in the basicsample.bas 
+In order to access python scripts from LibreOffice Basic you must create a LibreOffice Basic FUNCTION or SUB that will call the script. You can find a very "elementary" LibreOffice FUNCTION in the sample.bas 
 
 If your functions in the python script are going to access the LibreOffice Document and will not require special parameter passing, then there is no actual need to call them from LibreOffice Basic. Just assign them to events as explained in http://christopher5106.github.io/office/2015/12/06/openoffice-libreoffice-automate-your-office-tasks-with-python-macros.html
 
