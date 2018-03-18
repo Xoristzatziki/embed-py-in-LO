@@ -23,6 +23,7 @@ A GUI in which you can select the LibreOffice Document as well as python files t
 Python scripts in LibreOffice.
 ===
 In order to access a python script embedded in a LibreOffice document there are steps required:
+
 1 You must have installed python script provider.
 * -On Windows this is done automatically by the installer
 * -On other systems possibly you should add this functionality by yourself. Example:
