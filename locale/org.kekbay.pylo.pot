@@ -1,0 +1,301 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: testing create pot\n"
+"POT-Creation-Date: 2018-05-04 11:30+0300\n"
+"PO-Revision-Date: 2018-03-30 13:59+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: ui/startwindow.glade:28 startwindow.py:655
+msgid "LibreOffice Document"
+msgstr ""
+
+#: ui/startwindow.glade:57
+msgid "Select a LibreOffice Document."
+msgstr ""
+
+#: ui/startwindow.glade:107 main.py:156
+msgid "Existed"
+msgstr ""
+
+#: ui/startwindow.glade:121
+msgid "To do"
+msgstr ""
+
+#: ui/startwindow.glade:137
+msgid "Final"
+msgstr ""
+
+#: ui/startwindow.glade:165 startwindow.py:729
+msgid "No selection."
+msgstr ""
+
+#: ui/startwindow.glade:187
+msgid "Select a python file to add."
+msgstr ""
+
+#: ui/startwindow.glade:223
+msgid "Remove selected"
+msgstr ""
+
+#: ui/startwindow.glade:247
+msgid "Do not remove the python script."
+msgstr ""
+
+#: ui/startwindow.glade:271
+msgid "Replace selected with a newer version"
+msgstr ""
+
+#: ui/startwindow.glade:307
+msgid "Edit selected"
+msgstr ""
+
+#: ui/startwindow.glade:331
+msgid "View the source"
+msgstr ""
+
+#: ui/startwindow.glade:379
+msgid ""
+"Change font (font family or size)\n"
+"for showing the generated code."
+msgstr ""
+
+#: ui/startwindow.glade:400
+msgid ""
+"Change theme used\n"
+"for showing the generated code."
+msgstr ""
+
+#: ui/startwindow.glade:473
+msgid "Run..."
+msgstr ""
+
+#: ui/startwindow.glade:508
+msgid "About..."
+msgstr ""
+
+#: ui/startwindow.glade:535
+msgid "Exit"
+msgstr ""
+
+#: auxiliary.py:91
+msgid "_Yes"
+msgstr ""
+
+#: auxiliary.py:93
+msgid "_OK"
+msgstr ""
+
+#: auxiliary.py:95
+msgid "_No"
+msgstr ""
+
+#: auxiliary.py:97
+msgid "_Cancel"
+msgstr ""
+
+#: auxiliary.py:99
+msgid "OK"
+msgstr ""
+
+#: auxiliary.py:102
+msgid "ERROR"
+msgstr ""
+
+#: auxiliary.py:105
+msgid "WARNING"
+msgstr ""
+
+#: auxiliary.py:108
+msgid "QUESTION"
+msgstr ""
+
+#: auxiliary.py:111
+msgid "INFO"
+msgstr ""
+
+#: auxiliary.py:128
+msgid "You are about to:\n"
+msgstr ""
+
+#: auxiliary.py:129
+msgid "Are you sure?"
+msgstr ""
+
+#: documents.py:226
+msgid "Please choose a file"
+msgstr ""
+
+#: documents.py:239
+msgid "All files"
+msgstr ""
+
+#: documents.py:256
+msgid "LibreOffice files"
+msgstr ""
+
+#: documents.py:265
+msgid "Calc files"
+msgstr ""
+
+#: documents.py:270
+msgid "Writer files"
+msgstr ""
+
+#: documents.py:275
+msgid "Base files"
+msgstr ""
+
+#: documents.py:280
+msgid "Impress files"
+msgstr ""
+
+#: documents.py:285
+msgid "Draw files"
+msgstr ""
+
+#: documents.py:293
+msgid "Python files"
+msgstr ""
+
+#: main.py:68
+msgid "pylo"
+msgstr ""
+
+#: startwindow.py:150
+msgid "Error loading from Glade file"
+msgstr ""
+
+#: startwindow.py:242
+msgid ""
+"This is the version of this window.\n"
+"Not the version of the application."
+msgstr ""
+
+#: startwindow.py:301
+msgid "Keep"
+msgstr ""
+
+#: startwindow.py:305
+msgid "Remove"
+msgstr ""
+
+#: startwindow.py:309
+msgid "Replace"
+msgstr ""
+
+#: startwindow.py:313
+msgid "Add"
+msgstr ""
+
+#: startwindow.py:367
+msgid ""
+"This will create a temporary file.\n"
+"\n"
+"  If you want to make changes you must save\n"
+"the file with a valid name and use that new file\n"
+"to replace the embeded.\n"
+"Otherwise all your changes will be lost!\n"
+msgstr ""
+
+#: startwindow.py:456
+msgid "Changes were succesful"
+msgstr ""
+
+#: startwindow.py:457
+msgid "Old verion can be found at"
+msgstr ""
+
+#: startwindow.py:460
+msgid "Something went wrong"
+msgstr ""
+
+#: startwindow.py:461
+msgid "The error number was"
+msgstr ""
+
+#: startwindow.py:588
+msgid "Exit the application"
+msgstr ""
+
+#: startwindow.py:589
+msgid "  But you have made changes"
+msgstr ""
+
+#: startwindow.py:590 startwindow.py:638
+msgid "Any changes to the current document will be lost"
+msgstr ""
+
+#: startwindow.py:637
+msgid "Load a new file."
+msgstr ""
+
+#: startwindow.py:657
+msgid "Not a valid Document!"
+msgstr ""
+
+#: startwindow.py:660
+msgid "Invalid"
+msgstr ""
+
+#: startwindow.py:662
+msgid "Invalid Document"
+msgstr ""
+
+#: startwindow.py:671
+msgid "No file selected."
+msgstr ""
+
+#: startwindow.py:717
+msgid "Not yet implemented"
+msgstr ""
+
+#: startwindow.py:730
+msgid "Make a selection first"
+msgstr ""
+
+#: startwindow.py:755
+msgid "A BUG FOUND"
+msgstr ""
+
+#: startwindow.py:775
+msgid "Same name exists"
+msgstr ""
+
+#: startwindow.py:776
+msgid "Please remove it first"
+msgstr ""
+
+#: startwindow.py:781
+msgid "or use the button to replace it"
+msgstr ""
+
+#: startwindow.py:802
+msgid "Remove the file"
+msgstr ""
+
+#: startwindow.py:812
+msgid "Names do not match!"
+msgstr ""
+
+#: startwindow.py:815
+msgid "Additionally a script with same name exists."
+msgstr ""
+
+#: startwindow.py:816
+msgid "Cannot continue!"
+msgstr ""
+
+#: startwindow.py:820
+msgid "Add instead of replacing?"
+msgstr ""
