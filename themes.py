@@ -20,6 +20,10 @@
     along with Manage python scripts in LO Document.  If not, see <http://www.gnu.org/licenses/>.
 """
 
+#FIXME: correct the version
+__version__ = '0.0.8'
+VERSIONSTR = 'v. {}'.format(__version__)
+
 # Gtk and related
 from gi import require_version as gi_require_version
 gi_require_version('Gtk', '3.0')

@@ -19,7 +19,7 @@
 """
 
 #FIXME: correct the version
-__version__ = '0.0.19'
+__version__ = '0.0.8'
 VERSIONSTR = 'v. {}'.format(__version__)
 
 ERROR_IMPORT_LIBRARIES_FAIL = -1
@@ -139,6 +139,12 @@ class SectionConfig():
     All modifications during the existance of the instance
     are done in the instance's dict only for the specified section
     """
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        if self.parser:
+            self.save()
 
     def __init__(self, nameoffile, section):
         """Init the python's configparser.

@@ -24,7 +24,7 @@
 """
 
 #FIXME: correct the version
-__version__ = '0.0.1'
+__version__ = '0.0.8'
 VERSIONSTR = 'v. {}'.format(__version__)
 
 #RETURN ERROR CODES
