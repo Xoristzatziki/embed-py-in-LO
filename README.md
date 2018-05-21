@@ -1,3 +1,7 @@
+The development of this project is discontinued in behalf of [APSO](https://extensions.libreoffice.org/extensions/apso-alternative-script-organizer-for-python).
+
+The code will still be maintained here solely for educational purposes.
+
 # pilo
 GUI writen in python to embed a python script in a LibreOffice Document.
 
